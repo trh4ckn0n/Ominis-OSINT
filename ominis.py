@@ -51,9 +51,12 @@ async def main():
     clear_screen()
     print(
         f"""
-{Fore.YELLOW} {Fore.WHITE}🇴‌🇲‌🇮‌🇳‌🇮‌🇸‌-🇴‌🇸‌🇮‌🇳‌🇹‌ {Fore.YELLOW}- {Fore.RED}[{Fore.WHITE}Secure Web-Hunter{Fore.RED}]
-{Fore.RED} ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+{Fore.YELLOW} {Fore.WHITE}🇴‌🇲‌🇮‌🇳‌🇮‌🇸‌-🇴‌🇸‌🇮‌🇳‌🇹‌ {Fore.CYAN}-by {Fore.MAGENTA}𖨆 {Fore.BLUE}тянα¢кηση {Fore.MAGENTA}𖨆 {Fore.YELLOW}- {Fore.RED}[{Fore.WHITE}Secure Web-Hunter{Fore.RED}]
+{Fore.RED} 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     {Fore.YELLOW}~ {Fore.CYAN}Developer{Fore.YELLOW}: {Fore.WHITE} AnonCatalyst {Fore.MAGENTA}<{Fore.RED}
+    {Fore.RED}------------------------------------------
+    {Fore.YELLOW}~ {Fore.CYAN}Modder {Fore.YELLOW} : {Fore.WHITE}   TRHACKNON   {Fore.MAGENTA}<{Fore.RED}
     {Fore.RED}------------------------------------------
     {Fore.YELLOW}~ {Fore.CYAN}Github{Fore.YELLOW}:{Fore.BLUE} https:/github.com/AnonCatalyst/{Fore.RED}
     {Fore.RED}------------------------------------------
@@ -101,5 +104,3 @@ def clear_screen():
 
 if __name__ == "__main__":
     asyncio.run(main())
-
-
