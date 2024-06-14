@@ -8,37 +8,40 @@ from colorama import Fore, Style, init
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-async def scrape_proxies():
+async def fetch_proxy_page(session, proxy_url, timeout):
+    response = await session.get(proxy_url, timeout=timeout)
+    response.raise_for_status()
+    return response.text
+
+async def scrape_proxies(timeout=30):
     proxies = []
-    proxy_url = "https://www.proxy-list.download/HTTP"
+    proxy_url = "https://free-proxy-list.net/"
 
     async with httpx.AsyncClient() as session:
         try:
-            logger.info(f" 🕸️ Scraping proxies{Fore.RED}...{Style.RESET_ALL}")
-            response = await session.get(proxy_url)
-            if response.status_code == 200:
-                html = response.text
-                soup = BeautifulSoup(html, 'html.parser')
-                tbody = soup.find('tbody', id='tabli')
-                if tbody:
-                    for tr in tbody.find_all('tr'):
-                        tds = tr.find_all('td', limit=2)
-                        if len(tds) == 2:
-                            ip_address = tds[0].get_text(strip=True)
-                            port = tds[1].get_text(strip=True)
-                            proxy = f"{ip_address}:{port}"
-                            proxies.append(proxy)
-                    logger.info(f"🎃 Proxies scraped successfully{Fore.RED}. {Fore.BLUE}Total{Style.RESET_ALL}{Fore.RED}: {Fore.GREEN}{len(proxies)}{Style.RESET_ALL}")
-                else:
-                    logger.error(f"👻 {Fore.RED}Proxy list not found in the response.{Style.RESET_ALL}")
+            logger.info(f"🕸️ Scraping proxies...")
+            html = await fetch_proxy_page(session, proxy_url, timeout)
+            soup = BeautifulSoup(html, 'html.parser')
+            tbody = soup.find('tbody')
+            if tbody:
+                for tr in tbody.find_all('tr'):
+                    tds = tr.find_all('td', limit=2)
+                    if len(tds) == 2:
+                        ip_address = tds[0].get_text(strip=True)
+                        port = tds[1].get_text(strip=True)
+                        proxy = f"{ip_address}:{port}"
+                        proxies.append(proxy)
+                logger.info(f"Proxies scraped successfully. Total: {len(proxies)}")
             else:
-                logger.error(f"🧟 {Fore.RED}Failed to retrieve proxy list. Status code: {Fore.YELLOW}{response.status_code}{Style.RESET_ALL}")
+                logger.error("Proxy list not found in the response.")
+        except httpx.HTTPStatusError as e:
+            logger.error(f"Failed to retrieve proxy list. Status code: {e.response.status_code}")
         except Exception as e:
-            logger.error(f"👻 {Fore.RED}Error scraping proxies: {Style.RESET_ALL}{e}")
-            
+            logger.error(f"Error scraping proxies: {e}")
+
     if not proxies:
-        logger.error(f"👻 {Fore.RED}No proxies scraped.{Style.RESET_ALL}")
-        
+        logger.error("No proxies scraped.")
+
     return proxies
 
 async def validate_proxies(proxies, timeout=10):
@@ -57,5 +60,12 @@ async def validate_proxies(proxies, timeout=10):
                     logger.error(f"❌ Proxy {Fore.CYAN}{proxy_with_scheme} returned status code {Fore.YELLOW}{response.status_code}{Fore.RED}.{Style.RESET_ALL}")
         except (httpx.TimeoutException, httpx.RequestError) as e:
             logger.error(f"👻 {Fore.RED}Error occurred while testing proxy {Fore.CYAN}{proxy_with_scheme}{Fore.RED}: {Style.RESET_ALL}{e}")
-            
+
     return valid_proxies
+
+if __name__ == "__main__":
+    init(autoreset=True)
+    loop = asyncio.get_event_loop()
+    proxies = loop.run_until_complete(scrape_proxies())
+    valid_proxies = loop.run_until_complete(validate_proxies(proxies))
+    print(valid_proxies)
