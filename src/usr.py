@@ -71,7 +71,7 @@ def print_query_detection(username, url, html_content):
     try:
         # Check if username is detected in URL
         if username.lower() in url.lower():
-            #print(f"{Fore.YELLOW}🔸 Query detected in URL: {Fore.WHITE}{url}")
+            print(f"{Fore.YELLOW}🔸 Query detected in URL: {Fore.WHITE}{url}")
             query_detected = True
 
         # Check if username is detected in HTML content
@@ -196,7 +196,7 @@ if __name__ == "__main__":
             sys.exit(0)
 
         # Uncomment the line below if you want to display input_text before running main
-        # print(f" \n〘 Username Search: {input_text} 〙\n")
+        print(f" \n〘 Username Search: {input_text} 〙\n")
 
         main(input_text)
     except Exception as e:
