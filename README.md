@@ -4,7 +4,9 @@
   <p style="color: #333;"><img src="src/img/icons8-pokemon-100.png" alt="Pikachu SVG File" style="border: 2px solid #000; border-radius: 8px; box-shadow: 5px 5px 15px rgba(0,0,0,0.3);" /><br>
     🏴 <strong>Note:</strong> Trhacknon has modified this tool to use an API accessible for proxies, but he is not the original developer.🏴</p>
 </details>
-**Warning!** 
+
+   `☣️Warning!☣️`
+
     Proxy provider is experiencing server issues and Ominis-OSINT likely won't work until they fix there site.
     If there is no fix soon then I will work on a update.
     To compensate, Odinova is gonna release sooner now. Odinova will not have its Custom Tools window in its beta release. I had no plans for a beta until complications with the proxy site used in Ominis-OSINT.
@@ -152,7 +154,7 @@ Ominis OSINT Tools delivers actionable insights that enable users to make inform
 
 ## Installation
    ```
-   git clone https://github.com/AnonCatalyst/Ominis-OSINT
+   git clone https://github.com/tucommenceapousser/Ominis-OSINT
    pip install -r requirements.txt
    ```
 - Run the following command at your own risk if your having installation issues when using pip
@@ -163,7 +165,7 @@ Ominis OSINT Tools delivers actionable insights that enable users to make inform
 ``` 
 pip install -r requirements.txt --break-system-packages
 ```
-    
+
 > **Usage**
 
 1. Navigate to the script's directory:
