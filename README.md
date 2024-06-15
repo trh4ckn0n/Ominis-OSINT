@@ -157,10 +157,16 @@ Ominis OSINT Tools delivers actionable insights that enable users to make inform
    pip install -r requirements.txt
    ```
 - Run the following command at your own risk if your having installation issues when using pip
-- You can copy the file `ominis.py` to the /usr/bin/ominis and the folder src to /usr/bin/src for run this tool directly from : `ominis` command
+
+<details>
+  <summary style="font-size: 1.2em; font-weight: bold; color: #0073e6;">
+    🔍 Click here for see how copy to /usr/bin</summary>copy the file `ominis.py` to the /usr/bin/ominis and the folder src to /usr/bin/src for run this tool directly from : `ominis` command
+  
   ```
   cp -r src /usr/bin/src && cp ominis.py /usr/bin/ominis && chmod +x /usr/bin/ominis
   ```
+</details>
+
 ``` 
 pip install -r requirements.txt --break-system-packages
 ```
