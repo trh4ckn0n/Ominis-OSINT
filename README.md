@@ -5,8 +5,7 @@
     🏴 <strong>Note:</strong> Trhacknon has modified this tool to use an API accessible for proxies, but he is not the original developer.🏴</p>
 </details>
 
-   `☣️Warning!☣️`
-
+>`☣️Warning!☣️`
     Proxy provider is experiencing server issues and Ominis-OSINT likely won't work until they fix there site.
     If there is no fix soon then I will work on a update.
     To compensate, Odinova is gonna release sooner now. Odinova will not have its Custom Tools window in its beta release. I had no plans for a beta until complications with the proxy site used in Ominis-OSINT.
