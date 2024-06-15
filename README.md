@@ -29,7 +29,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 🚀 Happy OSINTing! 🕵️‍♂️
 
-<img src="src/img/screenshot.png" alt="Ominis Osint Project - screenshot" width="550" height="430"/>
+<img src="src/img/Screenshot_2024-06-15-00-59-45-338_com.android.chrome-edit.jpg" alt="Ominis Osint Project - screenshot" width="550" height="430"/>
 
 ## Features
 
