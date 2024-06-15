@@ -1,8 +1,8 @@
 ># Ominis-OSINT: Web Hunter 🌐🕵️‍♂️
-
 <details>
   <summary style="font-size: 1.2em; font-weight: bold; color: #0073e6;">🔍 Click here for more info about the trhacknon's modz</summary>
-  <p style="color: #333;">🏴 <strong>Note:</strong> Trhacknon has modified this tool to use an API accessible for proxies, but he is not the original developer.🏴</p>
+  <p style="color: #333;"><img src="src/img/icons8-pokemon-100.png" alt="Pikachu SVG File" style="border: 2px solid #000; border-radius: 8px; box-shadow: 5px 5px 15px rgba(0,0,0,0.3);" /><br>
+    🏴 <strong>Note:</strong> Trhacknon has modified this tool to use an API accessible for proxies, but he is not the original developer.🏴</p>
 </details>
 **Warning!** 
     Proxy provider is experiencing server issues and Ominis-OSINT likely won't work until they fix there site.
