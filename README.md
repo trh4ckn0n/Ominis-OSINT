@@ -1,5 +1,9 @@
 ># Ominis-OSINT: Web Hunter 🌐🕵️‍♂️
 
+<details>
+  <summary style="font-size: 1.2em; font-weight: bold; color: #0073e6;">🔍 Click here for more info about the trhacknon's modz</summary>
+  <p style="color: #333;">🏴 <strong>Note:</strong> Trhacknon has modified this tool to use an API accessible for proxies, but he is not the original developer.🏴</p>
+</details>
 **Warning!** 
     Proxy provider is experiencing server issues and Ominis-OSINT likely won't work until they fix there site.
     If there is no fix soon then I will work on a update.
