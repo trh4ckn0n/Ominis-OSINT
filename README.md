@@ -144,7 +144,7 @@ Ominis OSINT Tools delivers actionable insights that enable users to make inform
 ## Configuration
 
 - Web search uses Google by default.
-- Configure the list of URLs in `src/urls.txt` for username searches.
+- Configure the list of URLs in `src/urls.txt` or `/usr/bin/src/urls.txt` for username searches.
 
 ## Installation
    ```
