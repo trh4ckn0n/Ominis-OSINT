@@ -151,7 +151,11 @@ Ominis OSINT Tools delivers actionable insights that enable users to make inform
    git clone https://github.com/AnonCatalyst/Ominis-OSINT
    pip install -r requirements.txt
    ```
-- Run the following command at your own risk if your having installation issues when using pip 
+- Run the following command at your own risk if your having installation issues when using pip
+- You can copy the file `ominis.py` to the /usr/bin/ominis and the folder src to /usr/bin/src for run this tool directly from : `ominis` command
+  ```
+  cp -r src /usr/bin/src && cp ominis.py /usr/bin/ominis && chmod +x /usr/bin/ominis
+  ```
 ``` 
 pip install -r requirements.txt --break-system-packages
 ```
